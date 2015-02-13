@@ -1,0 +1,42 @@
+#daemon configuration
+telnet_port 4444
+gdb_port 3333
+tcl_port 5555
+
+#interface
+interface ft2232
+ft2232_device_desc "Stellaris Evaluation Board A"
+ft2232_layout evb_lm3s811
+ft2232_vid_pid 0x0403 0xbcd9
+
+#jtag speed
+jtag_khz 500
+
+#LM3S811 Evaluation Board has only srst
+reset_config srst_only
+
+#jtag scan chain
+#format L IRC IRCM IDCODE (Length, IR Capture, IR Capture Mask, IDCODE)
+jtag_device 4 0x1 0xf 0xe
+
+# the luminary variant causes a software reset rather than asserting SRST
+# this stops the debug registers from being cleared
+# this will be fixed in later revisions of silicon
+target cortex_m3 little 0 lm3s
+
+
+# 4k working area at base of ram
+working_area 0 0x20000800 0x2400 nobackup
+
+#flash configuration
+flash bank stellaris 0 0 0 0 0
+
+#enter the command mode, flashing the memory
+init
+reset halt
+sleep 200
+wait_halt
+flash erase_sector 0 0 255
+sleep 200
+flash write_bank 0 SymbricatorRTOS.bin 0
+shutdown 

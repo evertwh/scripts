@@ -1,0 +1,9 @@
+#Wed Sep 24 12:33:20 CEST 2008
+content-types/enabled=true
+content-types/org.eclipse.cdt.core.asmSource/file-extensions=s
+content-types/org.eclipse.cdt.core.cHeader/file-extensions=h
+content-types/org.eclipse.cdt.core.cSource/file-extensions=c,S
+content-types/org.eclipse.cdt.core.cxxHeader/file-extensions=h
+content-types/org.eclipse.cdt.core.cxxSource/file-extensions=cpp
+eclipse.preferences.version=1
+instance/org.eclipse.core.net/org.eclipse.core.net.hasMigrated=true
