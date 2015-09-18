@@ -10,10 +10,14 @@ set macros
 moments_median = "u 1:3"
 
 # interquartile range as filled curve
-moments_IQR = "u 1:4:5 every 10 w filledcurve fs transparent solid 0.25"
+moments_IQR = "u 1:4:5 w filledcurve fs transparent solid 0.25"
+
+# interquartile range as errorbars
+moments_IQR_BARS = "u 1:3:4:5 w yerrorbars"
+
 
 # mean
 moments_mean = "u 1:6"
 
 # 95% confidence around mean as filled curve
-moments_CI = "u 1:($6-(1.96*$8/sqrt($2))):($6+(1.96*$8/sqrt($2))) every 10 w filledcurve fs transparent solid 0.25"
+moments_CI = "u 1:($6-(1.96*$8/sqrt($2))):($6+(1.96*$8/sqrt($2))) w filledcurve fs transparent solid 0.25"

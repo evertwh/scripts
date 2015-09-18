@@ -1,0 +1,43 @@
+#!/opt/local/bin/gnuplot -persist
+
+#
+# Example of three plots in one image, using moments scripts
+#
+
+load 'analytics.pal'
+load 'grid.gpl'
+load 'moments.gnuplot' # macros for plotting the output of the 'moments-per-line.awk' script
+
+set multiplot
+
+# Bottom plot, with x-axis
+set lmargin at screen 0.1
+set bmargin at screen 0.12
+set tmargin at screen 0.39
+
+load 'xyborder.gpl'
+set ylabel 'Median'
+set xlabel 'Time'
+
+plot 'moments.out' @moments_median w li ls 1 notitle, '' every 20 @moments_IQR ls 1  notitle
+
+# Middle plot, no x-axis
+set bmargin at screen 0.42
+set tmargin at screen 0.69
+
+load 'yborder.gpl'
+set ylabel 'Mean'
+#set xlabel ''
+
+plot 'moments.out' @moments_mean w li ls 2 notitle, '' every 20 @moments_CI ls 2 notitle
+
+# Top plot
+set bmargin at screen 0.72
+set tmargin at screen 0.99
+
+set ylabel 'Median again'
+#set xlabel ''
+
+plot 'moments.out' @moments_median w li ls 3 notitle, '' every 20 @moments_IQR_BARS ls 3 lw 0.8 notitle
+
+unset multiplot
