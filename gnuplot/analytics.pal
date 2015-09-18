@@ -1,0 +1,10 @@
+# google analytics colour scheme
+
+set style line 1 lc rgb "#2B6088" lt 1 lw 2 # blue
+set style line 2 lc rgb "#F36E21" lt 1 lw 2 # orange
+set style line 3 lc rgb "#3DA648" lt 1 lw 2 # green
+set style line 4 lc rgb "#808080" lt 1 lw 2 # gray
+set style line 5 lc rgb "#FEE704" lt 1 lw 2 # yellow
+set style line 6 lc rgb "#EE2924" lt 1 lw 2 # red
+set style line 7 lc rgb "#0F6FB7" lt 1 lw 2 # lighter shade of blue
+set style line 8 lc rgb "#8D1E1C" lt 1 lw 2 # dark red

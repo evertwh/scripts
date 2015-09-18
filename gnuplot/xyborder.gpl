@@ -1,0 +1,8 @@
+# xyborder.gpl
+
+# Line style for axes
+set style line 80 lt 1 lw 0.75 lc rgb "#808080"
+set border 3 back linestyle 80
+
+set tics nomirror out scale 0.75
+set format '%g'

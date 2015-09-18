@@ -1,0 +1,3 @@
+# Line style for grid
+set style line 81 lt 1 lc rgb "#808080" lw 0.5 # dashed, light, gray
+set grid back linestyle 81

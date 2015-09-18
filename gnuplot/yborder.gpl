@@ -1,0 +1,11 @@
+# yborder.gpl
+
+# Line style for axes
+set style line 80 lt 1 lw 0.75 lc rgb "#808080"
+set border 2 back linestyle 80
+
+unset xlabel
+set format y '%g'
+set format x ''
+set ytics nomirror out scale 0.75
+set xtics nomirror out scale 0

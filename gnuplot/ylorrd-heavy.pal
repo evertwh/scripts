@@ -1,0 +1,27 @@
+# line styles for ColorBrewer YlOrRd
+# for use with sequential data
+# provides 8 yellow-orange-red colors of increasing saturation
+# compatible with gnuplot >=4.2
+# author: Anna Schneider
+
+heavy_linewidth = 3
+
+# line styles
+set style line 1 lt 1 lc rgb '#FFFFCC' lw heavy_linewidth # very light yellow-orange-red
+set style line 2 lt 1 lc rgb '#FFEDA0' lw heavy_linewidth #
+set style line 3 lt 1 lc rgb '#FED976' lw heavy_linewidth # light yellow-orange-red
+set style line 4 lt 1 lc rgb '#FEB24C' lw heavy_linewidth #
+set style line 5 lt 1 lc rgb '#FD8D3C' lw heavy_linewidth #
+set style line 6 lt 1 lc rgb '#FC4E2A' lw heavy_linewidth # medium yellow-orange-red
+set style line 7 lt 1 lc rgb '#E31A1C' lw heavy_linewidth #
+set style line 8 lt 1 lc rgb '#B10026' lw heavy_linewidth # dark yellow-orange-red
+
+# palette
+set palette defined ( 0 '#FFFFCC',\
+    	    	      1 '#FFEDA0',\
+		      2 '#FED976',\
+		      3 '#FEB24C',\
+		      4 '#FD8D3C',\
+		      5 '#FC4E2A',\
+		      6 '#E31A1C',\
+		      7 '#B10026' )

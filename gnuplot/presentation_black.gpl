@@ -1,0 +1,31 @@
+# formatting for black background
+set object 100 rectangle from screen 0,0 to screen 1,1 fillcolor rgb "black" behind
+
+legendcolor = "#FFFFFF"
+#"#a6a6a6"  # light grey
+gridcolor = "#808080"
+axiscolor = "#808080"
+
+# Line style for axes
+set style line 80 lt 0
+set style line 80 lt rgb axiscolor
+
+# Line style for grid
+set style line 81 lt 3  # dashed
+set style line 81 lt rgb gridcolor lw 0.5
+
+set grid back linestyle 81
+set border 3 back linestyle 80 # Remove border on top and right.  These
+             # borders are useless and make it harder
+             # to see plotted lines near the border.
+    # Also, put it in grey; no need for so much emphasis on a border.
+set xtics nomirror
+set ytics nomirror
+
+
+set xlabel textcolor rgb legendcolor
+set ylabel textcolor rgb legendcolor
+
+set xtics textcolor rgb legendcolor
+set ytics textcolor rgb legendcolor
+set key textcolor rgb legendcolor
