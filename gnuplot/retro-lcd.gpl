@@ -1,0 +1,33 @@
+set termoption dashed
+set termoption linewidth 2
+set termoption font 'Andale Mono'
+
+backgroundcolor = '#809080'
+set obj rect from screen 0,0 to screen 1,1 fillcolor rgb backgroundcolor behind
+
+axiscolor = '#606060'
+
+# Line style for axes
+set style line 80 lt 0
+set style line 80 lc rgb axiscolor lw 1
+
+# Line style for grid
+set style line 81 lt 3  # dashed
+set style line 81 lt rgb axiscolor lw 0.5  # grey
+
+set grid back linestyle 81
+set border 3 back linestyle 80 # Remove border on top and right.  These
+
+set xtics nomirror
+set ytics nomirror
+
+set style line 1 dt 1 lc rgb "#404040"
+set style line 2 dt 2 lc rgb "#404040"
+set style line 3 dt 3 lc rgb "#303030"
+set style line 4 dt 4 lc rgb "#404040"
+set style line 5 dt 5 lc rgb "#404040"
+set style line 6 dt 6 lc rgb "#404040"
+set style line 7 dt 7 lc rgb "#404040"
+set style line 8 dt 8 lc rgb "#404040"
+
+set style increment user
